@@ -92,8 +92,9 @@ module Payza
     private
       def parse(post)
         @raw = post
-        CGI.parse(post).each_pair do |k,v|
-          params[k] = v.to_s
+        for line in post.split('&')
+          key, value = *line.scan( %r{^(\w+)\=(.*)$} ).flatten
+          params[key] = CGI.unescape(value)
         end
       end
   end

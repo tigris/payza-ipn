@@ -9,7 +9,7 @@ module Payza
       development = 'https://sandbox.payza.com/checkout'
       production  = 'https://secure.payza.com/checkout'
       begin
-        Rails.env.development? development : production
+        Rails.env.development? ? development : production
       rescue NameError
         # TODO: support dev environments for other frameworks
         production

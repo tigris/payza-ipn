@@ -13,15 +13,15 @@ Gem::Specification.new do |s|
   s.description = "Converts a Payza IPN into an object."
   s.email = "git@tigris.id.au"
   s.extra_rdoc_files = [
-    "README.txt"
+    "README.md"
   ]
   s.files = [
-    "README.txt",
+    "README.md",
     "Rakefile",
     "VERSION.yml",
     "lib/notification.rb",
-    "lib/payza.rb",
-    "payza.gemspec",
+    "lib/payza-ipn.rb",
+    "payza-ipn.gemspec",
     "test/notification_test.rb"
   ]
   s.homepage = "http://github.com/tigris/payza-ipn"

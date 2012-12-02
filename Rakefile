@@ -4,11 +4,11 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "stateless-systems-alertpay"
+    gem.name = "payza"
     gem.summary = %Q{Common interface to alertpay request params.}
-    gem.email = "enquiries@statelesssystems.com"
-    gem.homepage = "http://github.com/stateless-systems/alertpay"
-    gem.authors = ["Stateless Systems"]
+    gem.email = "git@tigris.id.au"
+    gem.homepage = "http://github.com/tigris/payza"
+    gem.authors = ["Danial Pearce"]
   end
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
@@ -46,7 +46,7 @@ Rake::RDocTask.new do |rdoc|
   end
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "alertpay #{version}"
+  rdoc.title = "payza #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

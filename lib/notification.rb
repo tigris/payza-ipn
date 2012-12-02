@@ -1,6 +1,6 @@
 require 'cgi'
 
-module Alertpay
+module Payza
   class Notification
     attr_accessor :params
     attr_accessor :raw
@@ -15,8 +15,8 @@ module Alertpay
       params['ap_purchasetype']
     end
 
-    # Security code sent through from alertpay. You are to compare this with a
-    # hard coded value that you get from your alertpay profile, which only you
+    # Security code sent through from payza. You are to compare this with a
+    # hard coded value that you get from your payza profile, which only you
     # should know.
     def security_code
       params['ap_securitycode']
@@ -68,7 +68,7 @@ module Alertpay
       params['ap_merchant']
     end
 
-    # The item code on the alertpay side
+    # The item code on the payza side
     def item_code
       params['ap_itemcode']
     end

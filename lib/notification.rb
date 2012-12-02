@@ -5,6 +5,17 @@ module Payza
     attr_accessor :params
     attr_accessor :raw
 
+    def self.ipn_url
+      development = 'https://sandbox.payza.com/checkout'
+      production  = 'https://secure.payza.com/checkout'
+      begin
+        Rails.env.development? development : production
+      rescue NameError
+        # TODO: support dev environments for other frameworks
+        production
+      end
+    end
+
     def initialize(post)
       @params = {}
       parse(post)
